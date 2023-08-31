@@ -1,3 +1,12 @@
 .pokemon {
   padding: 30px;
 }
+
+@media (min-width: 800px) {
+  .card {
+    width: 22.5%;
+    padding: 10px;
+    border: 1px solid green;
+    margin: 1.25%;
+  }
+}

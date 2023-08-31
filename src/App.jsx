@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return(
-    <div>
+    <div className='container'>
       <h1>POKEMON!!</h1>
       <div className="pokemon" style={{display: 'flex', flexFlow: 'row wrap', padding:'20px'}}>
           {pokemonInformation.map((pokemon, index) => 
@@ -36,8 +36,11 @@ function App() {
             key={index}
             id={pokemon.id}
             name={pokemon.name}
-            image={pokemon.sprites.other.dream_world.front_default}
+            image={pokemon.sprites.other["official-artwork"].front_default}
             type={pokemon.types}
+            height={pokemon.height}
+            weight={pokemon.weight}
+            
           />
         )}
       </div>
