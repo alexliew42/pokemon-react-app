@@ -7,7 +7,6 @@ const AllPokemons = ({id,name,image,type,height,weight}) => {
   } else {
     pokemon_type = type[1].type.name.charAt(0).toUpperCase() + type[1].type.name.slice(1) 
   }
- 
 
   return(
     <div className="card" >
@@ -24,9 +23,12 @@ const AllPokemons = ({id,name,image,type,height,weight}) => {
         <li className="list-group-item">A third item</li>
       </ul>
       <div className="card-body">
-        <p>
-          {type[0].type.name.charAt(0).toUpperCase() + type[0].type.name.slice(1)} {pokemon_type}
-        </p>
+        <div className={type[0].type.name}>
+          {type[0].type.name.charAt(0).toUpperCase() + type[0].type.name.slice(1)}
+        </div>
+        <div className={pokemon_type.toLowerCase()}>
+          {pokemon_type}
+        </div>
       </div>
     </div>
   )
